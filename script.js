@@ -56,6 +56,6 @@ function printToDocument(url){
         data = data.results;
         var tableHeader = getHeader(data[0]);
         var dataRows = getRows(data);
-        document.getElementById("data").innerHTML = `<table>${tableHeader}${dataRows}</table>${pagination}`;
+        document.getElementById("data").innerHTML = `<table>${tableHeader}${dataRows}</table>${pagination}`.replace(/,/g, "");
     });
 }
